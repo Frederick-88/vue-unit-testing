@@ -1,9 +1,9 @@
 import { shallowMount } from "@vue/test-utils";
-import HelloWorld from "@/components/HelloWorld.vue";
+import Increment from "@/components/Increment.vue";
 
 describe("Increment.vue", () => {
   test("increments counter value on click", async () => {
-    const wrapper = shallowMount(HelloWorld);
+    const wrapper = shallowMount(Increment);
     const button = wrapper.find("button");
     const text = wrapper.find("p");
 

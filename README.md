@@ -1,6 +1,6 @@
-# vue-unit-testing
+## vue-unit-testing
 
-## Project setup
+### Project setup
 ```
 npm install
 ```

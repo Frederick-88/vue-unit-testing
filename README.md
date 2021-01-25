@@ -1,4 +1,4 @@
-# Vue-Unit-Testing
+## Vue-Unit-Testing
 
 ### Project setup
 ```

@@ -1,16 +1,34 @@
 import { shallowMount } from "@vue/test-utils";
-import Increment from "@/components/Increment.vue";
+import IncrementComponent from "@/components/Increment.vue";
+
+// tips - use "console.log(wrapper.html())" --- to see whole html of the app
 
 describe("Increment.vue", () => {
-  test("increments counter value on click", async () => {
-    const wrapper = shallowMount(Increment);
-    const button = wrapper.find("button");
-    const text = wrapper.find("p");
+  test("it increments / decrements based on clicked button", async () => {
+    const wrapper = shallowMount(IncrementComponent);
+    const incrementButton = wrapper.find('[data-testid="increment-btn"]');
+    const decrementButton = wrapper.find('[data-testid="decrement-btn"]');
+    const text = wrapper.find('[data-testid="total-click"]');
 
-    expect(text.text()).toContain("Total clicks: 0");
+    // ----------------------
+    // Increment Testing
+    // ----------------------
+    expect(text.text()).toBe("Total Clicks: 0");
+    await incrementButton.trigger("click");
+    expect(text.text()).toBe("Total Clicks: 1");
+    await incrementButton.trigger("click");
+    expect(text.text()).toBe("Total Clicks: 2");
 
-    await button.trigger("click");
-
-    expect(text.text()).toContain("Total clicks: 1");
+    // ----------------------
+    // Decrement Testing
+    // ----------------------
+    await decrementButton.trigger("click");
+    expect(text.text()).toBe("Total Clicks: 1");
+    await decrementButton.trigger("click");
+    expect(text.text()).toBe("Total Clicks: 0");
+    await decrementButton.trigger("click");
+    expect(text.text()).toBe("Total Clicks: -1");
+    await decrementButton.trigger("click");
+    expect(text.text()).toBe("Total Clicks: -2");
   });
 });

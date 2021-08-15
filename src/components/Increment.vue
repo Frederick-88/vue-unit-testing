@@ -1,7 +1,12 @@
 <template>
   <div>
-    <button class="increment-btn" @click="count++">Add up</button>
-    <p>Total clicks: {{ count }}</p>
+    <button class="increment-btn" data-testid="increment-btn" @click="count++">
+      Increase
+    </button>
+    <button class="increment-btn" data-testid="decrement-btn" @click="count--">
+      Decrease
+    </button>
+    <p data-testid="total-click">Total Clicks: {{ count }}</p>
   </div>
 </template>
 
@@ -18,6 +23,7 @@ export default {
 
 <style>
 .increment-btn {
+  margin: 0 10px;
   padding: 10px 25px;
   cursor: pointer;
   background-color: rgb(7, 85, 110);

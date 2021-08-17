@@ -1,14 +1,12 @@
 import { shallowMount } from "@vue/test-utils";
 import IncrementComponent from "@/components/Increment.vue";
 
-// tips - use "console.log(wrapper.html())" --- to see whole html of the app
-
 describe("Increment.vue", () => {
   test("it increments / decrements based on clicked button", async () => {
     const wrapper = shallowMount(IncrementComponent);
-    const incrementButton = wrapper.find('[data-testid="increment-btn"]');
-    const decrementButton = wrapper.find('[data-testid="decrement-btn"]');
-    const text = wrapper.find('[data-testid="total-click"]');
+    const incrementButton = wrapper.find("[data-testid='increment-btn']");
+    const decrementButton = wrapper.find("[data-testid='decrement-btn']");
+    const text = wrapper.find("[data-testid='total-click']");
 
     // ----------------------
     // Increment Testing

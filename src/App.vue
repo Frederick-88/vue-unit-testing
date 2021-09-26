@@ -2,16 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <Increment />
+    <FormComponent />
   </div>
 </template>
 
 <script>
 import Increment from "./components/Increment";
+import FormComponent from "./components/FormComponent";
 
 export default {
   name: "App",
   components: {
     Increment,
+    FormComponent,
   },
 };
 </script>

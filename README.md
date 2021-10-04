@@ -3,11 +3,19 @@
 ### Testing Demonstration Here Includes :
 
 - Basic Component Test ( Increment.vue )
-- Styling Test
-- Props & Event from Component Test
-- Form Test
-- Vuex Test
-- API Call Text
+- Styling & Conditional Class Test ( FormComponent.vue )
+- Props & Event from Component Test ( GlobalInput.vue )
+- Form Test ( FormComponent.vue )
+- Vuex Test (coming-soon)
+- API Call Test ( FormComponentWithApi.vue )
+
+### Sources :
+
+- axios mocker for unit testing -> https://github.com/axios/moxios
+- API call vue unit testing -> https://stackoverflow.com/questions/51983221/unable-to-get-moxios-stubrequest-to-work
+- Javascript Unit Testing Blog -> https://medium.com/powtoon-engineering/a-complete-guide-to-testing-javascript-in-2017-a217b4cd5a2a
+- `npm run test -- --coverage` to see coverage result -> https://scotch.io/tutorials/testing-react-and-redux-apps-with-jest
+- free api service for testing purposes -> https://jsonplaceholder.typicode.com/
 
 ### Project setup
 

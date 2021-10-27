@@ -6,7 +6,7 @@
 - Styling & Conditional Class Test ( FormComponent.vue )
 - Props & Event from Component Test ( GlobalInput.vue )
 - Form Test ( FormComponent.vue )
-- Vuex Test (coming-soon)
+- Vuex Test ( coming-soon )
 - API Call Test ( FormComponentWithApi.vue )
 
 ### Sources :
